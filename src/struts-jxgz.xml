@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<package name="com.masi.jxgz"  extends="struts-default" namespace="/">
+	<action name="JxdtAction" class="com.masi.jxgz.logic.JxdtLogic">
+	<result name ="jxdt" type="redirect">/jsp/jxgz/jxdt.jsp</result>
+	</action>
+	<action name="JxcgAction" class="com.masi.jxgz.logic.JxcgLogic">
+	<result name ="jxcg" type="redirect">/jsp/jxgz/jxcg.jsp</result>
+	</action>
+	<action name="JxglAction" class="com.masi.jxgz.logic.JxglLogic">
+	<result name ="jxgl" type="redirect">/jsp/jxgz/jxgl.jsp</result>
+	</action>
+	<action name="JxJpkAction" class="com.masi.jxgz.logic.JpkLogic">
+	<result name ="jpk" type="redirect">/jsp/jxgz/jpk.jsp</result>
+	</action>
+	<action name="JxgzAction" class="jxgzLogic">
+	<result name ="jxgz" type="redirect">/jsp/jxgz/jxgz.jsp</result>
+	
+	</action>
+</package>
+</struts>
+

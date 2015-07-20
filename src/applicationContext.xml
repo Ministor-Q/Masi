@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" >
+			<ref local="dataSource"/>
+		</property>
+		<!-- 配置Hibernate的属性 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+		<!-- 指定HIbernate映射文件的路径 -->
+		<property name="mappingResources">
+			<list>
+		<value>com/masi/hibernate/Jys.hbm.xml</value>
+		<value>com/masi/hibernate/Bg.hbm.xml</value>
+		<value>com/masi/hibernate/Jscb.hbm.xml</value>
+		<value>com/masi/hibernate/Js.hbm.xml</value>
+		<value>com/masi/hibernate/Jx.hbm.xml</value>
+		<value>com/masi/hibernate/Ckw.hbm.xml</value>
+		<value>com/masi/hibernate/Lw.hbm.xml</value>
+		<value>com/masi/hibernate/Jsjy.hbm.xml</value>
+		<value>com/masi/hibernate/Jsfb.hbm.xml</value>
+		<value>com/masi/hibernate/Norfile.hbm.xml</value>
+		<value>com/masi/hibernate/Xwgg.hbm.xml</value>
+		<value>com/masi/hibernate/Zyxz.hbm.xml</value>
+		<value>com/masi/hibernate/Jxgz.hbm.xml</value>
+		<value>com/masi/hibernate/Kygz.hbm.xml</value>
+		<value>com/masi/hibernate/Xygk.hbm.xml</value>
+		<value>com/masi/hibernate/Xsgz.hbm.xml</value>
+		<value>com/masi/hibernate/Szdw.hbm.xml</value>
+		<value>com/masi/hibernate/Djgz.hbm.xml</value>
+		<value>com/masi/hibernate/Rcpy.hbm.xml</value>
+		<value>com/masi/hibernate/Admin.hbm.xml</value>
+		<value>com/masi/hibernate/Sy.hbm.xml</value>
+		
+			</list>
+		</property>
+ 	</bean>
+ 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+ 	 	destroy-method="close">
+
+		<property name="driverClass">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+
+		<property name="jdbcUrl">
+			<value>jdbc:mysql://localhost:3306/masi</value>
+		</property>
+
+		<property name="user">
+			<value>root</value>
+		</property>
+
+		<property name="password">
+			<value>root</value>
+		</property>
+		<!-- 连接池中保留的最小连接数 -->
+		<property name="minPoolSize">
+			<value>5</value>
+		</property>
+		<!-- 连接池中保留的最大连接数 -->
+		<property name="maxPoolSize">
+			<value>30</value>
+		</property>
+		<!-- 初始化时获取的连接数 -->
+		<property name="initialPoolSize">
+			<value>10</value>
+		</property>
+		<!-- 最大空闲时间，60秒内未使用则连接被丢弃 -->
+		<property name="maxIdleTime">
+			<value>60</value>
+		</property>
+		<!-- 当连接池中的连接耗尽时c3p0一次获取的连接数 -->
+		<property name="acquireIncrement">
+			<value>5</value>
+		</property>
+		<!-- JDBC的标准参数，用以控制数据源内加载的PreparedStatements数量 。但由于
+		预缓存的statements属于单个connection而不是整个连接池。所以设置这个参数需要考虑
+		多方面的因素。如果maxStatements与maxStatementsPerConnection均为0，则缓存被关闭-->
+		<property name="maxStatements">
+			<value>0</value>
+		</property>
+		<!--每60秒检查所有连接池中的空闲连接 -->
+		<property name="idleConnectionTestPeriod">
+			<value>60</value>
+		</property>
+		<!-- 定义在从数据库获取新连接失败后重复尝试的次数 -->
+		<property name="acquireRetryAttempts">
+			<value>30</value>
+		</property>
+		<!--  获取连接失败将会引起所有等待连接池来获取连接的线程抛出异常。但是数据源
+		仍有效保留，并在下次调用getConnection()的时候继续尝试获取连接。如果设为true，
+		那么在尝试获取连接失败后该数据源将申明已断开并永久关闭-->
+		<property name="breakAfterAcquireFailure">
+			<value>false</value>
+		</property>
+	</bean>
+ 	<!--
+ 	 <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/masi</value>
+		</property>
+
+		<property name="username">
+			<value>root</value>
+		</property>
+
+		<property name="password">
+			<value>root</value>
+		</property>
+	</bean>
+	--><!--<bean id="hibernateTemplate"
+	class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	-->
+	<!--xygk-->
+	<bean id ="getHomepageDataDao" class="com.masi.homepage.dao.GetHomepageDataDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="getHomepageDataService" class="com.masi.homepage.service.GetHomepageDataService" >
+		<property name="getHomepageDataDao" ref="getHomepageDataDao" />	
+	</bean>
+	<bean id="getHomepageDataLogic" class="com.masi.homepage.logic.GetHomepageDataLogic" >
+		<property name="getHomepageDataService" ref="getHomepageDataService" />	
+	</bean>
+	<!-- 首页 -->
+	
+	
+	
+	<!--xygk-->
+	<bean id ="xyjjDao" class="com.masi.xygk.dao.XyjjDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="xyjjService" class="com.masi.xygk.service.XyjjService" >
+		<property name="xyjjDao" ref="xyjjDao" />	
+	</bean>
+	<bean id="xyjjLogic" class="com.masi.xygk.logic.XyjjLogic" >
+		<property name="xyjjService" ref="xyjjService" />	
+	</bean>
+	
+	<bean id ="jgszDao" class="com.masi.xygk.dao.JgszDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="jgszService" class="com.masi.xygk.service.JgszService" >
+		<property name="jgszDao" ref="jgszDao" />	
+	</bean>
+	<bean id="jgszLogic" class="com.masi.xygk.logic.JgszLogic" >
+		<property name="jgszService" ref="jgszService" />	
+	</bean>
+	<!--!!xygk!!-->
+	
+	<!-- zyxz -->
+	<bean id ="cywjDao" class="com.masi.zyxz.dao.CywjDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="cywjService" class="com.masi.zyxz.service.CywjService" >
+		<property name="cywjDao" ref="cywjDao" />	
+	</bean>
+	<bean id="cywjLogic" class="com.masi.zyxz.logic.CywjLogic" >
+		<property name="cywjService" ref="cywjService" />	
+	</bean>
+	<bean id ="KjDao" class="com.masi.zyxz.dao.KjDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KjService" class="com.masi.zyxz.service.KjService" >
+		<property name="kjDao" ref="KjDao" />	
+	</bean>
+	<bean id="KjLogic" class="com.masi.zyxz.logic.KjLogic" >
+		<property name="kjService" ref="KjService" />	
+	</bean>
+	<bean id ="downloadDao" class="com.masi.zyxz.dao.DownloadDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="downloadService" class="com.masi.zyxz.service.DownloadService" >
+		<property name="downloadDao" ref="downloadDao" />	
+	</bean>
+	<bean id="downloadLogic" class="com.masi.zyxz.logic.DownloadLogic" >
+		<property name="downloadService" ref="downloadService" />	
+	</bean>
+		<!-- zyxz结束 -->
+	<!-- xwgg -->
+	<bean id ="tzggDao" class="com.masi.xwgg.dao.TzggDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tzggService" class="com.masi.xwgg.service.TzggService" >
+		<property name="tzggDao" ref="tzggDao" />	
+	</bean>
+	<bean id="tzggLogic" class="com.masi.xwgg.logic.TzggLogic" >
+		<property name="tzggService" ref="tzggService" />	
+	</bean>
+	<bean id ="XwkxDao" class="com.masi.xwgg.dao.XwkxDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="XwkxService" class="com.masi.xwgg.service.XwkxService" >
+		<property name="xwkxDao" ref="XwkxDao" />	
+	</bean>
+	<bean id="XwkxLogic" class="com.masi.xwgg.logic.XwkxLogic" >
+		<property name="xwkxService" ref="XwkxService" />	
+	</bean>
+	
+	
+	<!-- xwgg结束 -->
+	<!-- rcpy -->
+	<bean id ="bkspyDao" class="com.masi.rcpy.dao.BkspyDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="bkspyService" class="com.masi.rcpy.service.BkspyService" >
+		<property name="bkspyDao" ref="bkspyDao" />	
+	</bean>
+	<bean id="bkspyLogic" class="com.masi.rcpy.logic.BkspyLogic" >
+		<property name="bkspyService" ref="bkspyService" />	
+	</bean>
+	<bean id ="yjspyDao" class="com.masi.rcpy.dao.YjspyDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="yjspyService" class="com.masi.rcpy.service.YjspyService" >
+		<property name="yjspyDao" ref="yjspyDao" />	
+	</bean>
+	<bean id="yjspyLogic" class="com.masi.rcpy.logic.YjspyLogic" >
+		<property name="yjspyService" ref="yjspyService" />	
+	</bean>
+	
+	<!-- rcpy结束 -->
+	
+	<!-- 教学工作 -->
+	<bean id ="jxgzDao" class="com.masi.jxgz.dao.JxgzDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="jxgzService" class="com.masi.jxgz.service.JxgzService" >
+		<property name="jxgzDao" ref="jxgzDao" />	
+	</bean>
+	<bean id="jxgzLogic" class="com.masi.jxgz.logic.JxgzLogic" >
+		<property name="jxgzService" ref="jxgzService" />	
+	</bean>
+	<!-- 教学工作 结束 -->
+		<!-- 科研工作 -->
+	<bean id ="kygzDao" class="com.masi.kygz.dao.KygzDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="kygzService" class="com.masi.kygz.service.KygzService" >
+		<property name="kygzDao" ref="kygzDao" />	
+	</bean>
+	<bean id="kygzLogic" class="com.masi.kygz.logic.KygzLogic" >
+		<property name="kygzService" ref="kygzService" />	
+	</bean>
+	<!-- 科研工作 结束 -->
+	
+	<!-- 管理员上传 -->
+	<bean id ="uploadDao" class="com.masi.admin.dao.UploadDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="uploadService" class="com.masi.admin.service.UploadService" >
+		<property name="uploadDao" ref="uploadDao" />	
+	</bean>
+	<bean id="uploadLogic" class="com.masi.admin.logic.UploadLogic" >
+		<property name="uploadService" ref="uploadService" />	
+	</bean>
+	<bean id ="loginDao" class="com.masi.admin.dao.LoginDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="loginService" class="com.masi.admin.service.LoginService" >
+		<property name="loginDao" ref="loginDao" />	
+	</bean>
+	<bean id="loginLogic" class="com.masi.admin.logic.LoginLogic" >
+		<property name="loginService" ref="loginService" />	
+	</bean>
+	<!-- 管理员后台上传 结束 -->
+	
+	<!-- 学生工作 -->
+	<bean id ="xsgzDao" class="com.masi.xsgz.dao.XsgzDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="xsgzService" class="com.masi.xsgz.service.XsgzService" >
+		<property name="xsgzDao" ref="xsgzDao" />	
+	</bean>
+	<bean id="xsgzLogic" class="com.masi.xsgz.logic.XsgzLogic" >
+		<property name="xsgzService" ref="xsgzService" />	
+	</bean>
+	<!-- 学生工作 结束 -->
+	<!-- 党建工作 -->
+	<bean id ="djgzDao" class="com.masi.djgz.dao.DjgzDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="djgzService" class="com.masi.djgz.service.DjgzService" >
+		<property name="djgzDao" ref="djgzDao" />	
+	</bean>
+	<bean id="djgzLogic" class="com.masi.djgz.logic.DjgzLogic" >
+		<property name="djgzService" ref="djgzService" />	
+	</bean>
+	<!-- 党建工作 结束 -->
+	<!-- 师资队伍 -->
+	<bean id ="szdwDao" class="com.masi.szdw.dao.SzdwDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="szdwService" class="com.masi.szdw.service.SzdwService" >
+		<property name="szdwDao" ref="szdwDao" />	
+	</bean>
+	<bean id="szdwLogic" class="com.masi.szdw.logic.SzdwLogic" >
+		<property name="szdwService" ref="szdwService" />	
+	</bean>
+	<!-- openArticle 结束 -->
+	<bean id ="openArticleDao" class="com.masi.article.dao.OpenArticleDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="openArticleService" class="com.masi.article.service.OpenArticleService" >
+		<property name="openArticleDao" ref="openArticleDao" />	
+	</bean>
+	<bean id="openArticleLogic" class="com.masi.article.logic.OpenArticleAction" >
+		<property name="openArticleService" ref="openArticleService" />	
+	</bean>
+	<bean id ="manageDao" class="com.masi.admin.dao.ManageDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="manageService" class="com.masi.admin.service.ManageService" >
+		<property name="manageDao" ref="manageDao" />	
+	</bean>
+	<bean id="manageLogic" class="com.masi.admin.logic.ManageLogic" >
+		<property name="manageService" ref="manageService" />	
+	</bean>
+	
+	<bean id ="deleteDao" class="com.masi.admin.dao.DeleteDao">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="deleteService" class="com.masi.admin.service.DeleteService" >
+		<property name="deleteDao" ref="deleteDao" />	
+	</bean>
+	<bean id="deleteLogic" class="com.masi.admin.logic.DeleteLogic" >
+		<property name="deleteService" ref="deleteService" />	
+	</bean>
+	
+	
+	<bean id="test" class="com.masi.test.Test">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="TestLogic" class="com.masi.test.TestLoigc">
+		<property name="test" ref="test" />	
+	</bean>
+	<bean id="JysDAO" class="com.masi.hibernate.JysDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="BgDAO" class="com.masi.hibernate.BgDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="JscbDAO" class="com.masi.hibernate.JscbDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="JsDAO" class="com.masi.hibernate.JsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="JxDAO" class="com.masi.hibernate.JxDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CkwDAO" class="com.masi.hibernate.CkwDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="LwDAO" class="com.masi.hibernate.LwDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="JsjyDAO" class="com.masi.hibernate.JsjyDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="JsfbDAO" class="com.masi.hibernate.JsfbDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="NorfileDAO" class="com.masi.hibernate.NorfileDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="XwggDAO" class="com.masi.hibernate.XwggDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ZyxzDAO" class="com.masi.hibernate.ZyxzDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="JxgzDAO" class="com.masi.hibernate.JxgzDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KygzDAO" class="com.masi.hibernate.KygzDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="SyDAO" class="com.masi.hibernate.SyDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="XsgzDAO" class="com.masi.hibernate.XsgzDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="DjgzDAO" class="com.masi.hibernate.DjgzDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="SzdwDAO" class="com.masi.hibernate.SzdwDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="XygkDAO" class="com.masi.hibernate.XygkDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="RcpyDAO" class="com.masi.hibernate.RcpyDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="AdminDAO" class="com.masi.hibernate.AdminDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean></beans>

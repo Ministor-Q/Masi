@@ -1,0 +1,28 @@
+/************************************
+************************************/
+.fd_main_nav_contain   {height:84px;width:100%;}
+/*--------   fd_main_nav  start-------- */
+.fd_main_nav{width:100%;padding-top:10px;height:45px;zoom:1;}
+.fd_main_nav:after{content:"";display:block;clear:both;}
+.fd_main_nav .item{position:relative;display:inline;float:left;margin:0 5px;height:45px;font:18px/45px "Microsoft YaHei";white-space:nowrap;text-align:center;}
+.fd_main_nav .item .a_menu{float:left;padding-left:5px;text-align:center;color:#71151a;}
+.fd_main_nav .item .a_menu span{float:left;}
+.fd_main_nav .item .sp_right{padding-right:5px;}
+.fd_main_nav .item .sp_center{padding:0 17px;}
+.fd_main_nav .first .sp_center{padding:0 30px;}
+.fd_main_nav li .a_menu:hover{color:#71151a;text-decoration:none;}
+/*閫変腑鐘舵�鈥斺�宸︿腑鍙�/
+.fd_main_nav .li_active .a_menu,.fd_main_nav .li_active .sp_right,.fd_main_nav .li_active .sp_center{background:url(../images/autumn/main_tab.png) 0 0 no-repeat;}
+.fd_main_nav .li_active .a_menu,.fd_main_nav .li_active .a_menu:hover{font-weight:bold;color:#fff;background-position:0 0;}
+.fd_main_nav .li_active .sp_right{background-position:right -92px;}
+.fd_main_nav .li_active .sp_center{background-position:right -46px;background-repeat:repeat-x;}
+/*------   select menu ------*/
+/*閫忔槑灞�/
+.fd_main_nav .filter{display:none;position:absolute;top:45px;left:0;z-index:999;width:100%;height:400px;background-color:#f4f4f4;filter:alpha(opacity=70);opacity:.7;border-radius:0 0 5px 5px ;}
+/*瀛愬鑸眰*/
+.fd_main_nav .main_nav_child{background-color:#f6f8fa;display:none;position:absolute;top:45px;left:0;z-index:9999;width:100%;line-height:35px;border:1px solid #ddd;border-top:0;border-radius:0 0 5px 5px ;}
+.fd_main_nav .main_nav_child li{float:none;width:100%;height:35px;border-bottom:1px solid #ddd;line-height:35px;overflow:hidden;vertical-align:top;}
+.fd_main_nav .main_nav_child li:last-child{ border-radius:0 0 5px 5px ;}
+.fd_main_nav .main_nav_child li a{display:block;padding:5px 0;font:15px/25px "Microsoft YaHei";color:#71151a;background:none;}
+.fd_main_nav .main_nav_child li.end{border-bottom:none;}
+.fd_main_nav .main_nav_child li a:hover{color:#fff;background-color:#fdb00d;text-decoration:none;}

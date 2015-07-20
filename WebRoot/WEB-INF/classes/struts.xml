@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    <constant name="struts.objectFactory" value="spring" />
+    <constant name="struts.multipart.maxSize" value="10485760"/>
+   <package name="article" extends="struts-default" namespace="/">
+	<action name="OpenArticleAction" class="com.masi.article.logic.OpenArticleAction" >
+			<result name="01" type="redirect">/jsp/homepage.jsp</result>
+			<result name="02" type="redirect">/jsp/xygk/xygk_arti.jsp</result>
+			<result name="03" type="redirect">/jsp/jxgz/jxgz_arti.jsp</result>
+			<result name="04" type="redirect">/jsp/kygz/kygz_arti.jsp</result>
+			<result name="05" type="redirect">/jsp/rcpy/rcpy_arti.jsp</result>
+			<result name="06" type="redirect">/jsp/xsgz/xsgz_arti.jsp</result>
+			<result name="07" type="redirect">/jsp/xwgg/xwgg_arti.jsp</result>
+			<result name="08" type="redirect">/jsp/djgz/djgz_arti.jsp</result>
+			<result name="09" type="redirect">/jsp/szdw/szdw_arti.jsp</result>
+			<result name="10" type="redirect">/jsp/zyxz/zyxz_arti.jsp</result>
+	</action>
+	<action name="GetPicBase64Action" class="com.masi.article.logic.GetPicBase64Action">
+	</action>
+	
+</package>
+    <include file="struts-homepage.xml" />
+	<include file="struts-jxgz.xml" />
+	<include file="struts-kygz.xml" />
+	<include file="struts-xwgg.xml" />
+	<include file="struts-xygk.xml" />
+	<include file="struts-zyxz.xml" />
+	<include file="struts-rcpy.xml" />
+	<include file="struts-admin.xml"/>
+	<include file="struts-xsgz.xml"/>
+	<include file="struts-djgz.xml"/>
+	<include file="struts-szdw.xml"/>
+	</struts>
+<!-- 首页 -->
+<!--学院概况  -->
+<!-- 教学工作 -->
+<!-- 科研工作 -->
+<!-- 新闻公告 -->
+<!-- 资源下载 -->
+
+
+
+
+

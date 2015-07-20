@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    <constant name="struts.objectFactory" value="spring" />
+<package name="com.masi.xygk"  extends="struts-default" namespace="/">
+	<action name="XyjjAction" class="xyjjLogic">
+	<result name ="xyjj" type="redirect">/jsp/xygk/xyjj.jsp</result>
+	</action>
+	<action name="JgszAction" class="jgszLogic">
+	<result name ="jgsz" type="redirect">/jsp/xygk/jgsz.jsp</result>
+	</action>
+</package>
+</struts>
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<package name="com.masi.zyxz" extends="struts-default" namespace="/">
+	<action name="CywjAction"  class="com.masi.zyxz.logic.CywjLogic" >
+	<result name="cywj" type="redirect">/jsp/zyxz/cywj.jsp</result></action>
+	<action name="KjAction"  class="com.masi.zyxz.logic.KjLogic" >
+	<result name="kj" type="redirect">/jsp/zyxz/kj.jsp</result></action>
+	<action name="DownloadAction" class="downloadLogic">
+		<result name="success" type="stream">
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename="${DownloadFileName}"</param>
+				<param name="bufferSize">8192</param>
+		</result>
+	
+	</action>
+	
+	
+	
+</package>
+</struts>
+
+
+
+
+
+
+
+
+
+

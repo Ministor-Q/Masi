@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<package name="com.masi.kygz"  extends="struts-default" namespace="/">
+	<action name="KydtAction" class="com.masi.kygz.logic.KydtLogic">
+	<result name ="kydt" type="redirect">/jsp/kygz/kydt.jsp</result>
+	</action>
+	<action name="KycgAction" class="com.masi.kygz.logic.KycgLogic">
+	<result name ="kycg" type="redirect">/jsp/kygz/kycg.jsp</result>
+	</action>
+	<action name="YjsAction" class="com.masi.kygz.logic.YjsLogic">
+	<result name ="yjs" type="redirect">/jsp/kygz/yjs.jsp</result>
+	</action>
+	<action name="KyJpkAction" class="com.masi.kygz.logic.JpkLogic">
+	<result name ="jpk" type="redirect">/jsp/kygz/jpk.jsp</result>
+	</action>
+	<action name="KygzAction" class="kygzLogic">
+	<result name ="kygz" type="redirect">/jsp/kygz/kygz.jsp</result>
+	</action>
+</package>
+</struts>
+
+
+
+
+
+
+
+
+

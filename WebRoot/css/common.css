@@ -1,0 +1,243 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/************************************
+ ************************************/
+ 
+ 
+/**************************************
+*name     		 layout
+*status   		 start
+*CreatTime 		  15.01.19
+**************************************/
+.fd_header,.fd_content,.fd_footer {width:100%;}	
+.fd_header{ position:relative;z-index:99;}
+.fd_content{height:auto;}
+.fd_footer{}
+.fd_main{margin:0 auto;width:1280px;zoom:1;}
+.fd_main:after{content:"";display:block;clear:both;}
+/**************************************
+*name      		layout
+*status   		 end
+*CreatTime 		  15.01.19
+**************************************/
+
+/**************************************
+*name     		theme
+*status    		start
+*CreatTime 		 15.01.19
+**************************************/
+
+/*--------------------   header  --------------------*/
+.fd_header_t{font:12px/40px SimSun;}
+.fd_header_t p span {float:left;margin-right:25px;}
+.fd_header_t p .sp_info {margin-right:0;}
+.fd_header_t p .sp_weather { width:30px;height:40px; background: none 0 center no-repeat;}
+.fd_ul_show{float:right;padding-top:3px;}
+.fd_ul_show .li_item{float:left;margin-left:10px;}
+.fd_ul_show .li_icon{margin-left:10px;padding:6px 0 0;}
+.fd_ul_show .li_icon{font:0/0 SimSun;text-indent:-9999em;}
+.fd_ul_show .li_icon a{float:left;width:24px;height:24px;border-radius:3px;}
+.fd_ul_show .li_change_skin,.fd_ul_show .li_skin{position:relative;}
+.fd_ul_show .li_info{float:none;text-align:right;clear:both;white-space:nowrap;}
+.fd_ul_show li,.fd_footer_in p{font:12px/40px SimSun;}
+
+.fd_header_m,.fd_flash ,.fd_table_header,.fd_table_header td{height:250px;overflow:hidden;}
+.fd_flash {width:100%;}
+.fd_table_header { width:100%;}
+.fd_logo {float:left;margin-left:138px;margin-top:30px;padding-left:105px;width:569px;height:101px;font:0/0 "Microsoft YaHei";}
+.fd_logo:hover {text-decoration:none;} 
+
+
+/*--------------------  content  --------------------*/
+.fd_banner_contain { padding:6px;background-color:#FFF;}
+
+/******************************** banner  *********************************/	
+.js_banner{width:100%;height:372px;overflow:hidden;}
+/*------------------------          horizontal   ----------------------------*/.js_banner{position:relative;}
+.js_banner .con li,.js_banner .con li img{width:100%;height:100%;overflow:hidden;}
+.js_banner .index{position:absolute;bottom:9px;left:0;z-index:9999;width:100%;text-align:center;}
+.js_banner .index li{float:left;width:15.31791907514451%;margin-left:0.72254335260115606%;height:5px;vertical-align:top;font:0/0 SimSun;background-color:#fff;}
+.js_banner .index .first { margin-left:1.7895953757225433%;}
+.js_banner .index .on {background-color:#0036a1;}
+.fd_banner_title {padding-top:6px;height:32px;font:20px/32px "Microsoft YaHei";}
+
+/******************************** fd_news_tab  *********************************/	
+.fd_news_tab{ border-right:1px solid #ddd9da;}
+.fd_news_tab .fd_nav{zoom:1;border-bottom:2px solid #cd391a;}
+.fd_news_tab .fd_nav:after{content:"";display:block;clear:both;}
+.fd_news_tab .fd_nav li{float:left;border:1px solid #dfdfdf;border-left-width:0;border-bottom-width:0;display:inline;padding:0 25px;font:20px/37px "Microsoft YaHei";white-space:nowrap;text-align:center;overflow:hidden;cursor:pointer;}
+.fd_news_tab .fd_nav .first{border-left-width:1px;}
+.fd_news_tab .fd_nav .li_prev{border-right:1px solid #ddd9da;}
+/*----------------------------------------------  only --------------------------------------------*/
+.fd_news_tab .con{ border:1px solid #ddd9da;border-top:none;border-right:none;height:382px;overflow:hidden;}
+.fd_news_tab .con_item {padding: 10px; }
+.fd_news_tab .con_item  .fd_ul_news {height:315px;}
+
+/******************************** fd_tab_02  *********************************/
+.fd_tab_02 { position:absolute;right:0;top:0;height:47px;overflow:hidden;}
+.fd_tab_02  li {float:left;padding:2px 5px 0;margin:0 5px;border-bottom:2px solid #f6f8fa;cursor:pointer;font:16px/43px "Microsoft YaHei";}
+.fd_tab_02_con {  position:relative;padding:15px 10px;height:210px;}
+.fd_tab_02_con .fd_con_item { position:absolute;z-index:2;top:15px;right:10px;left:10px;_width:932px;height:210px;overflow:hidden;}
+
+/******************************** fd_tab_03  *********************************/
+.fd_tab_03 { position:absolute;right:0;top:0;height:47px;overflow:hidden;}
+.fd_tab_03  li {float:left;padding:2px 5px 0;margin:0 5px;border-bottom:2px solid #f6f8fa;cursor:pointer;font:16px/43px "Microsoft YaHei";}
+.fd_tab_03_con {  position:relative;padding:15px 10px;height:175px;}
+.fd_tab_03_con .fd_con_item { position:absolute;z-index:2;top:15px;right:10px;left:10px;_width:932px;height:175px;overflow:hidden;}
+.fd_tab_03_con .fd_con_item  .fd_col_262 { _width:262px;overflow:hidden;}
+.fd_tab_03_con .fd_con_item  .fd_col_675 { _width:660px;overflow:hidden;}
+
+/******************************** fd_tab_04  *********************************/
+.fd_tab_04 { border-top:3px solid #ef6f05;}
+.fd_tab_04 .fd_nav { zoom:1;background-color:#f5f5f5;}
+.fd_tab_04 .fd_nav:after {content:"";display:block;clear:both;}
+.fd_tab_04 .fd_nav  li {float:left;width:50%;text-align:center;cursor:pointer;font:18px/37px "Microsoft YaHei";}
+.fd_tab_04 .fd_nav  li  a {display:block;border-bottom:1px solid #ccc;}
+.fd_tab_04 .fd_nav  li  a:hover {text-decoration:none;}
+.fd_tab_04 .fd_nav  .first a {margin-right:1px;}
+.fd_tab_04 .con {  position:relative;padding:15px 10px;height:40px;overflow:hidden;}
+.fd_tab_04 .con .fd_con_item { position:absolute;z-index:2;top:15px;right:15px;left:15px;height:90px;overflow:hidden;}
+.fd_tab_04 .con  p {font:14px/30px "Microsoft YaHei"; }
+.fd_tab_04 .con .fd_con_item img { margin-right:5px;}
+
+/*---------  fd_tab_05  ---------*/
+.fd_tab_05{position:relative;margin-right:10px;height:180px;overflow:hidden;background-color:#fff;zoom:1;}
+.fd_tab_05:after{content:"";display:block;clear:both;}
+.fd_tab_05 .index{position:absolute;top:50%;right:0;width:10px;}
+.fd_tab_05 .index li{margin-bottom:2px;width:10px;height:10px;line-height:0;font-size:0;text-indent:-9999em;cursor:pointer;background:url(../images/circle.gif) 0px -13px no-repeat;}
+.fd_tab_05 .index li.on{cursor:default;background-position:0 0;}
+.fd_tab_05 .con { width:270px;margin-left:15px;height:180px;overflow:hidden;}
+.fd_tab_05 .con  .fd_ul_01 { height:180px;overflow:hidden;}
+
+/*常用工具*/
+.fd_tab_05_cygj,.fd_tab_05_fwgj ,.fd_tab_05_bgxt{padding-bottom:15px;}
+.fd_tab_05_cygj ,.fd_tab_05_cygj .con {height:262px;}
+
+/*服务审判*/
+.fd_tab_05_fwsp,.fd_tab_05_fwsp .con {height:187px;}
+
+/*办公系统*/
+.fd_tab_05_bgxt,.fd_tab_05_bgxt .con {height:82px;}
+
+/*站内搜索*/
+.fd_znss { float:left;padding-bottom:20px;}
+.fd_znss  p {margin-bottom:10px;zoom:1;}
+.fd_znss  p:after {content:"";display:block;clear:both;}
+.fd_znss .p_btn {margin-top:15px;margin-bottom:0;}
+.fd_znss  p label ,.fd_znss  p input ,.fd_znss  p select  {float:left;font:14px "Microsoft YaHei";}
+.fd_znss  p label  { width:80px;text-align:right;padding:1px;height:28px;line-height:28px;}
+.fd_znss  p input ,.fd_znss  p select  {width:188px;height:30px;border:1px solid #d6d6d6;}
+.fd_znss  p option { padding:5px 0;} 
+.fd_znss  p .fd_input_text { padding:0 5px;width:178px;line-height:28px;height:28px;}
+.fd_znss  p .fd_input_btn {width:87px;height:34px;border-radius:2px;border:none;cursor:pointer;}
+.fd_znss  .no_mb {margin-bottom:0;}
+
+/*信息球*/
+.fd_xxq { padding:5px 0 25px;text-align:center; }
+.fd_xxq a {display:inline-block;}
+.fd_xxq img { width:227px;height:209px;}
+
+/*视频展播*/
+.fd_spzb { padding:0 15px 5px;}
+.fd_spzb  img {width:100%;}
+.fd_spzb .fd_ul_news {padding-top:5px;height:150px;}
+
+/*电子刊物*/
+.fd_dzkw { padding:5px 0 25px;text-align:center;}
+.fd_dzkw a {margin:0 5px;display:inline-block;}
+.fd_dzkw img { width:108px;height:150px;}
+
+/*友情链接*/
+.fd_friend_link {padding:5px 30px 20px;}
+.fd_friend_link select {width:100%;height:30px;border:1px solid #d6d6d6;font:14px "Microsoft YaHei";color:#8c6666;}
+.fd_friend_link   option { padding:5px 0;} 
+
+/*在线调查*/
+.fd_online { padding:0 55px;}
+.fd_online  p {zoom:1;font:14px "Microsoft YaHei";}
+.fd_online  p:after {content:"";display:block;clear:both;}
+.fd_online  p label ,.fd_online  p input  {float:left;font:14px "Microsoft YaHei";}
+.fd_online  p .fd_radio { margin:6px 3px 0 15px;_margin:5px 3px 0 15px;width:14px;height:14px;}
+.fd_online  p label  { height:26px;line-height:26px;_height:24px;_line-height:24px;}
+.fd_online .p_btn {padding:5px 0 14px; _padding:8px 0 18px;}
+.fd_online   .fd_input_btn {margin-right:10px;width:87px;height:34px;border-radius:2px;border:none;cursor:pointer;text-align:center;}
+
+.fd_column_news  {padding:15px 10px;}
+.fd_column_news  .fd_ul_news {height:175px;}
+.fd_img { zoom:1;}
+.fd_img:after { content:"";display:block;clear:both;}
+.fd_img a ,.fd_img img {float:left;width:100%;height:93px;}
+
+.fd_scroll_area {position:relative;width:100%;height:175px;overflow:hidden;}
+.fd_scroll_area .fd_btn_pre ,.fd_scroll_area .fd_btn_next{position:absolute;top:58px;width:35px;height:35px;font:0px/0 SimSun;z-index:999;}
+.fd_scroll_area .fd_btn_pre:hover,.fd_scroll_area .fd_btn_next:hover {text-decoration:none;}
+.fd_scroll_area .fd_btn_pre {left:10px; background: url(../images/autumn/arrow_prev.png) center 0 no-repeat;}
+.fd_scroll_area .fd_btn_next { right:10px;background: url(../images/autumn/arrow_next.png) center 0 no-repeat;}
+.fd_scroll_area .fd_con{position:relative;margin:15px auto 0;width:856px;height:145px;overflow:hidden;}
+.fd_ul_scroll{width:10000px;}
+.fd_ul_scroll .item {float:left;padding:0 5px;width:161px;height:145px;}
+.fd_ul_scroll .item  .a_img {margin-bottom:5px;}
+.fd_ul_scroll .item  .a_img,.fd_ul_scroll .item  .a_img img{  float:left;width:100%;}
+.fd_ul_scroll .item   p {  font:13px/16px SimSun;color:#8c6666;}
+.fd_scroll_area .fd_btn_next_gray, .fd_scroll_area .fd_btn_next_gray{cursor:default;background-position:0 -35px;}
+
+
+/**********  庭室*******/
+.fd_ts_contain {  padding: 20px 15px;}
+/********** 光荣榜*******/
+.fd_grb_contain  { padding:9px;height:160px;background-color:#ffae00;text-align:center;overflow:hidden;}
+.fd_grb_contain  img {margin-bottom:5px; width:188px;height:134px;}
+.fd_grb_contain p { font:14px/14px "Microsoft YaHei";}
+/********** 像这样的精神的人*******/
+.fd_jsb_contain {  padding:19px 10px;overflow:hidden;}
+.fd_jsb_contain  .fd_ul_news { height:140px;}
+
+.fd_img_contain {float:right;padding-top:8px;width:249px;height:169px;background: url(../images/fd_img_contain.png) 0 2px no-repeat;overflow:hidden;}
+.fd_img_contain_in {margin:0 auto;padding:4px;width:227px;height:150px; border:1px solid #d7d7d7;background-color:#fff;}
+
+/*--------------------  footer  --------------------*/
+.fd_footer {height:128px;overflow:hidden;}
+.fd_footer_in {padding-top:22px;}
+.fd_footer_in p {text-align:center;font:12px/30px SimSun;}
+/*----------------  2    ---------------- */
+
+.fd_news_list_contain {  min-height:120px;padding:12px 10px 0 15px; }
+/*------------   3 ------------*/
+/*--------   4 -------- */
+/*----  5 ----*/
+/*6 */
+
+.fd_article {
+	padding:50px 75px;
+	background-color:#fff;
+}
+.fd_article .dt_article_hd {
+	padding-bottom:30px;
+	border-bottom:1px solid #ddd;
+	text-align:center;
+}
+.fd_article .dt_article_hd h2 {
+	margin-bottom:30px;
+	font:26px/1em "Microsoft YaHei";	
+}
+.p_date_text { 
+	color:#969696;
+	font:12px/1em SimSun;
+}
+.fd_article_con {
+	padding:50px 0;
+	color:#737373;
+	font:14px/1.5em SimSun;
+}
+.fd_article_con  p {
+	margin-bottom:1em;
+	text-indent:2em;
+}
+
+/**************************************
+*name     		 theme
+*status    		 end
+*CreatTime 		  15.01.19
+**************************************/
+
+

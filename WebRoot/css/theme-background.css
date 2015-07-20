@@ -1,0 +1,128 @@
+@charset "utf-8";
+/* CSS Document */
+/************************************
+ ************************************/
+ body { background-color:#eeeaeb;}
+ /*--------------------   header  --------------------*/
+.fd_header_t {background-color:#b90f00;}
+.fd_header_t p .sp_weather_sun { background-image: url(../images/autumn/icon_sun.png) }
+.fd_ul_show .li_change_skin .change_skin{background: url(../images/autumn/icon_skin.png) center center no-repeat;}
+.fd_ul_show .li_client a {background: url(../images/autumn/icon_compute.png) center 2px no-repeat;}		
+.fd_ul_show .li_icon  a:hover {background-color:#e44100;} 	
+.fd_header_m .fd_l { background:url(../images/autumn/header_m.png) 0 0 repeat-x;}	
+.fd_header_m .fd_m { background: url(../images/autumn/fd_flash.png) 0 0 no-repeat;}
+.fd_table_header .fd_r {background: url(../images/autumn/header_m_r.png) 0 0 repeat-x;}
+.fd_logo  {background: url(../images/logo.png) 0 center no-repeat;}
+.fd_main_nav_contain { background: url(../images/autumn/main_nav.png) 0 0 repeat-x;}
+.fd_main_nav  .li_active .fd_item_btn  span {background: url(../images/autumn/main_tab.png) 0 0 no-repeat;}
+.fd_main_nav  .li_active .fd_item_btn .sp_l {background-position:0 0;}
+.fd_main_nav  .li_active .fd_item_btn .sp_r {background-position:right -92px;}
+.fd_main_nav  .li_active .fd_item_btn .sp_m {background-position:right -46px;background-repeat:repeat-x;}
+.js_banner .index li {background-color:#fff;}
+.js_banner .index .on  {background-color:#0036a1;}
+.fd_news_tab { background-color:#fff;border-color:#ddd9da;}
+.fd_news_tab  .fd_nav { border-color:#cd391a; border-right-color: #ddd9da ;background: url(../images/fd_news_tab.png) 0 0 repeat-x;}
+.fd_news_tab .fd_nav .on{ border-color:#cd391a;background: url(../images/autumn/fd_nes_tab_active.png) 0 0 repeat-x;}
+.fd_news_tab .fd_nav .li_prev { border-right-color:#cd391a;}
+.fd_more_contain  a  ,.fd_more{background: url(../images/autumn/icon_more.png) right center no-repeat;}
+
+
+.fd_banner_contain {background-color:#f38007;}
+.fd_dl_01  { background-color:#fff;border-color:#dcd8d9;}
+.fd_dl_01 .dt_hd {border-color:#f0f1f3;}
+.fd_dl_01 .dt_hd_inpage { border-color:#dfdfdf;}
+.fd_dl_01 .dt_hd  .sp_icon_01 {background-image:url(../images/autumn/icon_title_01.png);}
+.fd_dl_01 .dt_hd  .sp_icon_02 {background-image:url(../images/autumn/icon_title_02.png);}
+.fd_dl_01 .dt_hd  .sp_icon_03 {background-image:url(../images/autumn/icon_title_03.png);}
+.fd_dl_01 .dt_hd  .sp_icon_04 {background-image:url(../images/autumn/icon_title_04.png);}
+.fd_dl_01 .dt_hd  .sp_icon_05 {background-image:url(../images/autumn/icon_title_05.png);}
+.fd_dl_01 .dt_hd  .sp_icon_06 {background-image:url(../images/autumn/icon_title_06.png);}
+.fd_dl_01 .dt_hd  .sp_icon_07 {background-image:url(../images/autumn/icon_title_07.png);}
+.fd_dl_01 .dt_hd  .sp_icon_08 {background-image:url(../images/autumn/icon_title_08.png);}
+.fd_dl_01 .dt_hd  .sp_icon_09 {background-image:url(../images/autumn/icon_title_09.png);}
+.fd_dl_01 .dt_hd  .sp_icon_10 {background-image:url(../images/autumn/icon_title_10.png);}
+.fd_dl_01 .dt_hd  .sp_icon_11 {background-image:url(../images/autumn/icon_title_11.png);}
+.fd_dl_01 .dt_hd  .sp_icon_12 {background-image:url(../images/autumn/icon_title_12.png);}
+
+.fd_dl_02 .dt_hd {background-color:#9d6a44;}
+.fd_dl_02 .dt_hd  .sp_icon_01 {background-image:url(../images/autumn/icon_title_white_01.png);}
+
+.fd_dl_03 .dt_hd {background-color:#f38007;}
+.fd_dl_03 .dt_hd  .sp_icon_01 {background-image:url(../images/autumn/icon_title_white_02.png);}
+.fd_dl_03 .dt_hd  .sp_icon_02 {background-image:url(../images/autumn/icon_title_white_03.png);}
+.fd_dl_03 .dt_hd  .sp_icon_03 {background-image:url(../images/autumn/icon_title_white_04.png);}
+.fd_dl_03 .dt_hd  .sp_icon_04 {background-image:url(../images/autumn/icon_title_white_05.png);}
+
+.fd_scroll_area .fd_btn_pre {background: url(../images/autumn/arrow_prev.png) center 0 no-repeat;}
+.fd_scroll_area .fd_btn_next { background: url(../images/autumn/arrow_next.png) center 0 no-repeat;}
+.fd_scroll_area .fd_btn_next_gray, .fd_scroll_area .fd_btn_next_gray{background-position:0 -35px;}
+.fd_tab_02  li.active {border-color:#ef7b2a;}
+.fd_tab_03  li.active {border-color:#ef7b2a;}
+ 
+.fd_table_01  td {  background-color:#f5edea;}
+.fd_table_01 .tr_strip  td {  background-color:#eadbd5;}
+
+.fd_ul_news_range  li .sp_num { background-color:#ffd67f;}
+.fd_ul_news_range  li .sp_num_front { background-color:#f38007;}
+
+.fd_ul_01 .li_strip { background-color:#f1dfd7;}
+.fd_ul_01 .li_hd{ background-color:#deb29e;}
+
+
+.fd_ul_02 {background-color: #f6f8fa}
+.fd_ul_02 li .sp_l {background-color:#ffae00;}
+
+.fd_ul_03 li  a  { background-color:#fde6cd;}
+.fd_ul_03 li  a:hover  { background-color:#ffecd8;}
+.fd_ul_03 .li_icon_01 a  { background-image:url(../images/autumn/icon_link_01.png);}
+.fd_ul_03 .li_icon_02 a  { background-image:url(../images/autumn/icon_link_02.png);}
+.fd_ul_03 .li_icon_03 a  { background-image:url(../images/autumn/icon_link_03.png);}
+.fd_ul_03 .li_icon_04 a  { background-image:url(../images/autumn/icon_link_04.png);}
+.fd_ul_03 .li_icon_05 a  { background-image:url(../images/autumn/icon_link_05.png);}
+.fd_ul_03 .li_icon_06 a  { background-image:url(../images/autumn/icon_link_06.png);}
+.fd_ul_03 .li_icon_07 a  { background-image:url(../images/autumn/icon_link_07.png);}
+.fd_ul_03 .li_icon_08 a  { background-image:url(../images/autumn/icon_link_08.png);}
+.fd_ul_03 .li_icon_09 a  { background-image:url(../images/autumn/icon_link_09.png);}
+.fd_ul_03 .li_icon_10 a  { background-image:url(../images/autumn/icon_link_10.png);}
+.fd_ul_03 .li_icon_11 a  { background-image:url(../images/autumn/icon_link_11.png);}
+.fd_ul_03 .li_icon_12 a  { background-image:url(../images/autumn/icon_link_12.png);}
+.fd_ul_03 .li_icon_13 a  { background-image:url(../images/autumn/icon_link_13.png);}
+.fd_ul_03 .li_icon_14 a  { background-image:url(../images/autumn/icon_link_14.png);}
+.fd_ul_03 .li_icon_15 a  { background-image:url(../images/autumn/icon_link_15.png);}
+.fd_ul_03 .li_icon_16 a  { background-image:url(../images/autumn/icon_link_16.png);}
+.fd_ul_03 .li_icon_17 a  { background-image:url(../images/autumn/icon_link_17.png);}
+.fd_ul_03 .li_icon_18 a  { background-image:url(../images/autumn/icon_link_18.png);}
+.fd_ul_03 .li_icon_19 a  { background-image:url(../images/autumn/icon_link_19.png);}
+.fd_ul_03 .li_icon_20 a  { background-image:url(../images/autumn/icon_link_20.png);}
+.fd_ul_03 .li_icon_21 a  { background-image:url(../images/autumn/icon_link_21.png);}
+.fd_ul_03 .li_icon_22 a  { background-image:url(../images/autumn/icon_link_22.png);}
+
+.fd_ul_04 li  a  { background-color:#ffe9b9;}
+.fd_ul_04 li  a:hover  { background-color:#feedc8;}
+.fd_ul_04 .li_icon_01 a  { background-image:url(../images/autumn/icon_link2_01.png);}
+.fd_ul_04 .li_icon_02 a  { background-image:url(../images/autumn/icon_link2_02.png);}
+.fd_ul_04 .li_icon_03 a  { background-image:url(../images/autumn/icon_link2_03.png);}
+.fd_ul_04 .li_icon_04 a  { background-image:url(../images/autumn/icon_link2_04.png);}
+.fd_ul_04 .li_icon_05 a  { background-image:url(../images/autumn/icon_link2_05.png);}
+.fd_ul_04 .li_icon_06 a  { background-image:url(../images/autumn/icon_link2_06.png);}
+.fd_ul_04 .li_icon_07 a  { background-image:url(../images/autumn/icon_link2_07.png);}
+.fd_ul_04 .li_icon_08 a  { background-image:url(../images/autumn/icon_link2_08.png);}
+
+.fd_ul_05  .li_icon_01 a { background-image:url(../images/autumn/icon_01.png);background-color:#4b89dc;} 
+.fd_ul_05  .li_icon_01 a:hover {background-color:#5899f0;} 
+.fd_ul_05  .li_icon_02 a { background-image:url(../images/autumn/icon_02.png);background-color:#db4453;} 
+.fd_ul_05  .li_icon_02 a:hover {background-color:#f75767;} 
+.fd_ul_05  .li_icon_03 a { background-image:url(../images/autumn/icon_03.png);background-color:#81b449;} 
+.fd_ul_05  .li_icon_03 a:hover {background-color:#9dd85c;} 
+
+.fd_tab_04 {border-color:#ef6f05;background-color:#fff;}
+.fd_tab_04 .fd_nav  .first { background: url(../images/fd_tab_04_bj.png) right 0 repeat-y;}
+.fd_tab_04 .fd_nav  .active a { background-color:#fff;border-color:#fff;}
+
+.fd_znss  p .fd_input_btn,.fd_online   .fd_input_btn { background:#f38007;}
+.fd_znss  p .fd_input_btn:hover,.fd_online   .fd_input_btn:hover  { background:#f59026;}
+
+.fd_online   .fd_input_btn_r { background-color:#9d6a44;}  
+.fd_online   .fd_input_btn_r:hover { background-color:#bd8154;}  
+ /*--------------------   footer  --------------------*/
+.fd_footer {  background: url(../images/autumn/footer.png) 0 0 repeat-x;}

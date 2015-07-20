@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+/************************************
+ *  function		user  write  your own CSS !
+ ********************************************************/
+ .rcpy_bkspy,.rcpy_yjspy{
+ 	height:90px;
+ 	text-align: center;
+ 	background-color: background-color:#ffd67f;
+ }
+ .rcpy_bkspy  ul li,.rcpy_yjspy  ul li{
+ 	height:30px;
+ 	line-height: 30px;
+ }
+ .rcpy_title,.xwgg_title{
+ background-color:#f1dfd7;
+ width:100%;
+ height:40px;line-height: 40px;text-align: center; font-family: 'Microsoft YaHei'; font-size: 20;color: white;
+ display: block;
+ }
+ .rcpy_title,.xwgg_title a{
+ display:block;
+ }
+ .rcpy_title,.xwgg_title a:HOVER{
+ background-color:  #f38007;
+ }
+ .li_hd{
+ background-color:#deb29e;
+ color: black; 
+ }
+ .li_strip{
+ background-color:  #f1dfd7;
+ }
+ 
+ .admin_upload{
+ width:800px;
+ height:400px;
+ line-height: 60px;
+ }
+ .admin_upload_btn,.admin_delete_btn{
+ width:150px;
+ height:40px;
+ background-color: #f38007;
+ border-radius:6px;
+ border-color: transparent;
+ }
+ .admin_delete_btn{
+ margin-top:15px;
+ float:left;
+ }
+ .div-left{
+ float: left;
+ }
+
+ #page { padding:25px 20px;zoom:1;}
+#page:after {content:"";display:block;clear:both;} 
+#page  p {float:right;height:32px;}
+#page  p  span {float:left;margin-right:10px;font:18px/32px "Microsoft YaHei";}
+#page  p  span a { float:left;margin-right:7px;min-width:32px;_width:32px;height:32px;text-align:center;color:#666;text-decoration:none;background: none  0 -2px repeat-x;overflow:hidden;border:1px solid #ccc;}
+#page  p  span a:hover  { text-decoration:none;color:#000;background:#ddd;}
+#page  p   .a_point,#page  p   .a_point:hover { cursor:default;background:none;border-color:#fff;color:#666;}
+
+body p .p1,body p .p2,body p .p3,body p .p4{
+letter-spacing: 15px;
+}
+.fd_main_content2{
+padding:50px 80px 50px 80px;
+}
+
+.fd_main_content2 span p{
+line-height:150%;
+}

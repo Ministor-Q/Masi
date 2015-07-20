@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<package name="com.masi.admin" extends="struts-default" namespace="/">
+	<!--<interceptors>
+		<interceptor name="userNull" class="com.masi.admin.logic.UserNullInterceptor"></interceptor>
+		<interceptor-stack name="myStack">
+			<interceptor-ref name="userNull"></interceptor-ref>
+		</interceptor-stack>
+	</interceptors>
+	
+	--><global-results>
+		<result name="login" type="redirect">/jsp/login/login.jsp</result>
+	</global-results>
+	<action name="UploadAction" class="uploadLogic" >
+		
+		<result name="upload" type="redirect">/jsp/admin/upload.jsp</result>
+		<interceptor-ref name="fileUpload">
+		
+		<param name="allowTypes">application/msword,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/zip, application/pdf,image/jpeg </param>
+		<param name="maximumSize">20M</param>
+		</interceptor-ref>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+	</action>
+	
+	<action name="LoginAction" class="com.masi.admin.logic.LoginLogic">
+		<result name="success" type="redirect">/jsp/admin/success.jsp</result>
+		<result name="error" type="redirect">/jsp/login/login.jsp</result>
+	</action>
+	<action name="ManageAction" class="com.masi.admin.logic.ManageLogic" method="manage">
+		<result name="success" type="redirect">/jsp/admin/manage.jsp</result>
+	</action>
+	<action name="DeleteAction" class="com.masi.admin.logic.DeleteLogic">
+		<result name="success" type="redirectAction">
+			<param name="actionName">ManageAction</param>
+			<param name="attri">${attri}</param>
+			<param name="pages">${pages}</param>
+		</result>
+	</action>
+	
+	
+</package>
+	
+</struts>
+

@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+/************************************
+ ************************************/
+ /*--------------------   header  --------------------*/
+.fd_header_t ,
+.fd_header_t a,
+.fd_header_t a:hover,
+.fd_logo,.fd_logo:hover,
+.fd_footer_in p ,
+.fd_banner_title,
+.fd_news_tab .fd_nav .on,
+.fd_more_noicon,
+.fd_dl_03 .dt_hd,
+.fd_grb_contain p ,
+.fd_ul_02 li span,
+.fd_znss  p .fd_input_btn,
+.fd_ul_05  li  a ,
+.fd_online .fd_input_btn {color:#fff;}
+.fd_main_nav .fd_item_btn .sp_m,.fd_ul_scroll .item   p  a{color:#71151a;}
+.fd_more_contain a,.fd_more_contain a:hover,.fd_ul_news li a,.fd_ul_news li a:hover,.fd_ul_news li .sp_right ,.fd_ul_news li.hot a,
+.fd_more ,.fd_more:hover{color:#8c6666;}	
+.fd_dl_01 .dt_hd,.fd_table_01  td a:hover  { color:#ef6f05;}
+.fd_tab_02  li,.fd_tab_03  li,.fd_tab_02 li a, .fd_tab_03 li a  { color:#4c4948;}
+.fd_tab_02  li.active ,.fd_tab_03  li.active ,.fd_tab_04 .fd_nav  .active   a   ,.fd_tab_02 .active  a, .fd_tab_03 .active a{color:#ef7b2a;} 
+.fd_table_01  td a,.fd_tab_04 .con  p,.fd_ul_01  li ,.fd_ul_03 li  a   ,.fd_ul_04 li  a ,.fd_znss  p label ,.fd_znss  p input ,.fd_znss  p select,.fd_online  p{ color:#8b6868;}
+.fd_tab_04 .fd_nav  li  a  { color:#4c4948;}
+.fd_ul_news li a  i{ color:#ff0000;}
+.fd_ul_news .i_text { color:#1fa4c7;}
+.fd_article .dt_article_hd h2 {  color:#502d33;}
